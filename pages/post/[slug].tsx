@@ -227,7 +227,7 @@ selection */}
           Selection Process {" "}   </h4>
                     
                     <PortableText
-                      className=""
+                      className="text-l"
                       {...sanityClient.config()}
                       content={post.sel}
                       serializers={{
@@ -286,7 +286,7 @@ selection */}
 <h2 className="text-l mt-10 mb-3">
           Registration form   </h2>
 
-<iframe className="max-w-3xl mx-auto" src={post.gurl} width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe className="max-w-3xl mx-auto" src={post.gurl} width="100%" height="1000" >Loading…</iframe>
 
 
         <div className="flex items-center space-x-4">

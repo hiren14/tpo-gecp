@@ -13,7 +13,7 @@ export interface IPost {
   bond:any;
   inter:any;
   quali:string;
-  sel:string;
+  sel:any;
   elig:string;
   package:string;
   gurl:string;
