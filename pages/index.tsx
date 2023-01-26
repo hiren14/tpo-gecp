@@ -56,7 +56,7 @@ export default function Home({ posts }: IProps) {
               />
               <div className="flex justify-between p-5 bg-white gap-1">
                 <div className="flex-shrink">
-                  <p className="text-lg font-bold">{post.title}</p>
+                  <p className="text-lg font-bold">{post.companyname}</p>
                   <p className="text-lg font-bold">
                   {post.companyname}
                   </p>
