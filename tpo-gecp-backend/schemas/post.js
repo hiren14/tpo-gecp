@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: "companyname",
-      title: "Company Name",
+      title: "CompanyName",
       type: "string",
     },
     {
@@ -119,7 +119,7 @@ export default {
 
   preview: {
     select: {
-      title: "title",
+      title: "companyname",
       author: "author.name",
       media: "mainImage",
     },
