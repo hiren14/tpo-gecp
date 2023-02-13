@@ -19,6 +19,14 @@ export default {
     }
   },
   {
+    name: "cimg",
+    title: "Company image",
+    type: "image",
+    options: {
+      hotspot: true,
+    },
+  },
+  {
     name: "sdatas",
     title: "Student Data",
     type: "array",
