@@ -23,15 +23,16 @@ export default function Home({ posts }: IProps) {
           <h1 className="text-6xl max-w-xl font-serif">
             {" "}
             <span className="underline decoration-black decoration-4">
-              Medium
+              Tnp site  
             </span>{" "}
-            is a place to write read and connect
+            to find the placement and past placement drives
           </h1>
+         
          
         </div>
         <img
           className="hidden md:inline-flex h-64 lg:h-full"
-          src="https://iconape.com/wp-content/files/gc/11611/png/medium-m.png"
+          src=""
           alt=""
         />
       </div>

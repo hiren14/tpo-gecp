@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import PortableText from "react-portable-text";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
+import Footer from "../../components/footer/Footer";
 
 interface IProps {
   post: IPost;
@@ -68,9 +69,14 @@ const Post = ({ post }: IProps) => {
   return (
     <main>
       <Header />
-      <img
+      <section className="flex flex-col justify-center antialiased bg-gray-50 text-gray-600 min-h-screen p-4">
+    <div className="h-full">
+        {/* <!-- Card --> */}
+        <div className="container flex-col justify-center sm:min-w-sm md:min-w-md xl:min-w-full  lg:min-w-lg bg-white rounded-lg overflow-hidden shadow-lg  mx-4  mt-7 mb-6">
+            <div className="bg-white shadow-lg rounded-lg p-5">
+                    <img
         src={urlFor(post.mainImage).url()!}
-        className="w-full h-40 object-cover"
+        className=" w-full h-50 object-cover"
         alt=""
       />
       <article className="max-w-3xl mx-auto p-5">
@@ -135,7 +141,7 @@ const Post = ({ post }: IProps) => {
 
  <h4 className="text-l mt-10 mb-3">
  Package: {"  "} </h4>
- <p className="text-l font-light text-gray-500 mb-2">
+ <p className="text-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
   {post.package}</p>
         
 {/* vac */}
@@ -153,7 +159,7 @@ Job Location: {" "}</h4>   <p className="text-l font-light text-gray-500 mb-2">
 {/* internship  */}
 
 <h4 className="text-l mt-10 mb-3">
-internship: {" "} </h4>   <p className="text-l font-light text-gray-500 mb-2">
+internship: {" "} </h4>   <p className="text-l  font-light text-gray-500 mb-2">
      {post.inter} </p>
         
 
@@ -207,15 +213,16 @@ Bond Details {" "}   </h4>
 {/* 
 Qualification  */}
 
-<h4 className="text-l mt-10 mb-3">
+<h4 className="text-l  font-blod text-gray-500 mb-2">
 
-Qualification {' '} </h4>  <p className="text-l font-light text-gray-500 mb-2">
+Qualification {' '} </h4>  <p className="text-ltext-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
       {post.quali}
  </p>       
+ <br />
 {/* 
 Eligibility */}
-<h4 className="text-l mt-10 mb-3">
-Eligibility {""}  </h4> <p className="text-l font-light text-gray-500 mb-2">
+<h4 className="text-l  font-light text-gray-500 mb-2">
+Eligibility {""}  </h4> <p className="text-l text-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
   {post.elig}
         </p>
         {/* 
@@ -267,15 +274,17 @@ selection */}
                   </div>
 
         {/* DATE OF INTERVIEW */}
+        <br />
 
-        <p className="font-extralight text-sm space-x-4">
+        <p className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2  space-x-4">
         DATE OF INTERVIEW{' '}
               {  new Date(post.dinter).toLocaleString()}
           </p>
       
         {/* last date of registration */}
+        <br />
 
-        <p className="font-extralight text-sm space-x-4">
+        <p className="font-extralight text-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm  text-gray-700 mr-2 mb-2 space-x-4">
         last date of registration{" "}
               {  new Date(post.dlast).toLocaleString()}
           </p>
@@ -303,6 +312,7 @@ selection */}
         </div>
       
       </article>
+      </div>
       <hr className="max-w-lg my-5 mx-auto border border-yellow-500" />
       {commentRes.message ? (
         <div className="flex flex-col p-10 my-10 bg-yellow-500 text-white max-w-2xl mx-auto">
@@ -421,6 +431,10 @@ selection */}
           </div>
         )}
       </div>
+      </div>
+      </div>
+      </section>
+      <Footer />
     </main>
   );
 };

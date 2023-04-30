@@ -1,4 +1,5 @@
 import Link from "next/link";
+import logo from '../public/logo.png';
 
 const Header = () => {
     return (
@@ -7,19 +8,14 @@ const Header = () => {
                 <Link href="/">
                     <img
                         className="w-44 object-contain cursor-pointer"
-                        src="https://links.papareact.com/yvf"
+                        src='../public/logo.png'
                         alt="" />
                 </Link>
-                <div className="hidden md:inline-flex items-center space-x-5">
-                    
-                    <a href="/"><h3>Home</h3></a>
-                    <h3><a href="/placed">Student Placed</a></h3>
-                    <h3 className="text-white bg-green-600 px-4 py-1 rounded-full">Follow</h3>
-                </div>
-            </div>
-            <div className="flex items-center space-x-5 text-green-600">
-                <h3>Sign In</h3>
-                <h3 className="border px-4 py-1 rounded-full border-green-600">Get Started</h3>
+                            </div>
+            <div className="flex items-center space-x-5">
+            <a href="/"><h3>Home</h3></a>
+                <h3 className="border rounded-full px-3 py-1">
+                <a href="/placed">Student Placed</a></h3>
             </div>
         </header>)
 }

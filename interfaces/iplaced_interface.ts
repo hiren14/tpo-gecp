@@ -1,3 +1,4 @@
+
 export interface ISPlaced {
     name: string;
     position:string;

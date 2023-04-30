@@ -3,6 +3,8 @@ import Header from "../../components/header";
 import { IPlaced } from "../../interfaces/placed_interface";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
+import Footer from "../../components/footer/Footer";
+
 
 interface IProps {
   placed: IPlaced;
@@ -28,32 +30,29 @@ const Placed = ({ placed }: IProps) => {
       <div className="flex flex-wrap justify-center text-center mb-24">
             {/* <!-- Meet the Team --> */}
             {/* <div className="w-full lg:w-6/12 px-4"> */}
-              <div className="justify-center text-center mb-24">
+          
                         {/* <!-- Header --> */}
                         <h1 className="text-gray-900 text-4xl font-bold mb-8">
                         {placed.companyname}
                         </h1>
-                        
-                        {/* <!-- Description --> */}
+                        <hr className='dots' />
+                        {/* <!-- Description -->
                         <p className="text-gray-700 text-lg font-light">
                             With over 100 years of combined experience, we've got a well-seasoned team at the helm.
-                        </p>
-                        {/* </div> */}
-                    </div>
+                        </p> */}
+                            <br />
             {placed.sdatas?.length ? (
           placed.sdatas?.map((sdata) => (
             
-            <div className="container max-w-7xl px-4">
+            <div className="container max-w-sm  bg-white rounded-lg overflow-hidden shadow-lg lg:my-10 xl:my-20 mx-4  mt-7 mb-6">
                 {/* <!-- Section Header --> */}
-                <div className="flex flex-wrap justify-center text-center mb-24">
-                  
-                </div>
+                
 
                 {/* <!-- Team Members --> */}
                 <div className="flex flex-wrap justify-center text-center mb-2">
                     {/* <!-- Member #1 --> */}
-                    <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div className="flex flex-col">
+                    <div className="w-full  mb-12 mt-9 px-12 sm:px-6 sm:mt-14  lg:px-8">
+                           <div className="flex flex-col">
                             {/* <!-- Avatar --> */}
                             <a href="#" className="mx-auto">
                                 <img className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
@@ -103,6 +102,9 @@ const Placed = ({ placed }: IProps) => {
                </div>
              )}
         </div>
+        
+        <Footer />
+        
     </main>
   );
 };
