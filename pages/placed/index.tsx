@@ -6,6 +6,7 @@ import { IPlaced } from "../../interfaces/placed_interface";
 // interfaces// Client
 import { sanityClient, urlFor } from "../../lib/sanity";
 import Placed from "./[slug]";
+import Footer from "../../components/footer/Footer";
 
 interface IProps {
   posts: IPlaced
@@ -68,6 +69,7 @@ export default function Home({ posts }: IProps) {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

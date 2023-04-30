@@ -7,8 +7,8 @@ const Header = () => {
             <div className="flex items-center space-x-5">
                 <Link href="/">
                     <img
-                        className="w-44 object-contain cursor-pointer"
-                        src='../public/logo.png'
+                        className="w-10 sm:w-15 lg:w-20 md:w-20 xl:w-25 2xl:w-30 object-contain cursor-pointer"
+                        src='https://tpogecp.vercel.app/logo.png'
                         alt="" />
                 </Link>
                             </div>
