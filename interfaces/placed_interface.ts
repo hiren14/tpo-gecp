@@ -1,6 +1,7 @@
 import { ISPlaced } from "./iplaced_interface";
 import { ISdata } from "./sdata_interface";
 
+
 export interface IPlaced {
   _id: string;
     companyname:string;
