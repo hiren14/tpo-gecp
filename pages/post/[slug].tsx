@@ -72,8 +72,11 @@ const Post = ({ post }: IProps) => {
       <section className="flex flex-col justify-center antialiased bg-gray-50 text-gray-600 min-h-screen p-4">
     <div className="h-full">
         {/* <!-- Card --> */}
-        <div className="container flex-col justify-center sm:min-w-sm md:min-w-md xl:min-w-full  lg:min-w-lg bg-white rounded-lg overflow-hidden shadow-lg  mx-4  mt-7 mb-6">
-            <div className="bg-white shadow-lg rounded-lg p-5">
+        {/* <div className="container flex-col justify-center sm:min-w-sm md:min-w-md xl:min-w-full  lg:min-w-lg bg-white rounded-lg overflow-hidden shadow-lg  mx-4  mt-7 mb-6">
+            <div className="bg-white shadow-lg rounded-lg p-5"> */}
+ <div className="container my-24 px-6 mx-auto bg-white shadow-lg rounded-lg p-5">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-xl-12">
+              
                     <img
         src={urlFor(post.mainImage).url()!}
         className=" w-full h-50 object-cover"
@@ -295,7 +298,7 @@ selection */}
 <h2 className="text-l mt-10 mb-3">
           Registration form   </h2>
 
-<iframe className="max-w-3xl mx-auto" src={post.gurl} width="100%" height="1000" >Loading…</iframe>
+<iframe className="max-w-3xl mx-auto" src={post.gurl} width="400" height="1000" >Loading…</iframe>
 
 
         <div className="flex items-center space-x-4">

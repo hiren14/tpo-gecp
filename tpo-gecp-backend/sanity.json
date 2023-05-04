@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "j090oj19",
+    "projectId": "1cktyunv",
     "dataset": "production"
   },
   "project": {
-    "name": "gecp tpo"
+    "name": "tpo-gecp"
   },
   "plugins": [
     "@sanity/base",
