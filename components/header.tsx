@@ -1,23 +1,22 @@
-import Link from "next/link";
-import logo from '../public/logo.png';
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 const Header = () => {
     return (
-        <header className="flex justify-between p-5 max-w-7xl mx-auto">
-            <div className="flex items-center space-x-5">
-                <Link href="/">
-                    <img
-                        className="w-10 sm:w-15 lg:w-20 md:w-20 xl:w-25 2xl:w-30 object-contain cursor-pointer"
-                        src='https://tpogecp.vercel.app/logo.png'
-                        alt="" />
+        <header className='flex items-center justify-between space-x-2 font-bold py-5 px-10'>
+            <div className='flex items-center space-x-2'>
+                <Link href={"/"} >
+                    <img src={"./profile-pic.png"} className="rounded-full" width={50} height={50} alt="CapTon"/>
                 </Link>
-                            </div>
-            <div className="flex items-center space-x-5">
-            <a href="/"><h3>Home</h3></a>
-                <h3 className="border rounded-full px-3 py-1">
-                <a href="/placed">Student Placed</a></h3>
+                <h1>tpo gecp</h1>
             </div>
-        </header>)
+
+            <div>
+                <Link href={'https://www.linkedin.com/company/gec-patan/'}  target="_blank" className="px-5 py-3 text-xs sm:text-sm md:text-base  bg-gray-700 text-[#0ACBCB] flex items-center rounded-full text-center hover:bg-gradient-to-tr from-teal-400 via-violet-600 to-yellow-200 hover:text-white hover:shadow-2xl">Visit </Link>
+            </div>
+        </header>
+    )
 }
 
 export default Header
