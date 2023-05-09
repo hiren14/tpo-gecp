@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -9,7 +8,7 @@ const Header = () => {
                 <Link href={"/"} >
                     <img src={"./profile-pic.png"} className="rounded-full" width={50} height={50} alt="CapTon"/>
                 </Link>
-                <h1>tpo gecp</h1>
+                <h1>TNP GECPATAN</h1>
             </div>
 
             <div>
