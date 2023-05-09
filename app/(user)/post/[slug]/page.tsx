@@ -1,6 +1,5 @@
 import { PortableText } from "@portabletext/react";
 import { groq } from "next-sanity";
-import Image from "next/image";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
 import { client } from "../../../../lib/sanity.client";
 import urlFor from "../../../../lib/urlFor";
@@ -44,17 +43,20 @@ const Post = async ({ params: { slug } }: Props) => {
     categories[]->,
     sel,
     vac,
+    description,
+    title,
     job,
     package,
+    companyname,
     inter,
+    mainImage,
     loc,
     elig,
+    bond,
     quali,
     dinter,
     dlast,
     gurl,
-  
-
   }
     `
 
@@ -64,7 +66,7 @@ const Post = async ({ params: { slug } }: Props) => {
     <article className="px-10 p-18">
       <section className="space-y-2 mb-10 border border-[#0ACBCB] text-white">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
-          <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
+          {/* <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
             <img
               className="object-cover object-center mx-auto"
               src={urlFor(post.mainImage).url()}
@@ -73,12 +75,12 @@ const Post = async ({ params: { slug } }: Props) => {
               (max-width: 1200px) 100vw,
               100vw"
             />
-          </div>
+          </div> */}
 
           <section className="p-5 bg-[#0ACBCB] w-full ">
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
               <div>
-                <h1 className="text-4xl font-extrabold">{post.title}</h1>
+                <h1 className="text-4xl font-extrabold">{post.companyname}</h1>
                 <p className="text-sm">
                   {
                     new Date(post._createdAt).toLocaleDateString(

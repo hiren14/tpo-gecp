@@ -6,7 +6,7 @@ const Header = () => {
         <header className='flex items-center justify-between space-x-2 font-bold py-5 px-10'>
             <div className='flex items-center space-x-2'>
                 <Link href={"/"} >
-                    <img src={"./profile-pic.png"} className="rounded-full" width={50} height={50} alt="CapTon"/>
+                    <img src={"./profile-pic.png"} className="rounded-full" width={50} height={50} alt="TNP"/>
                 </Link>
                 <h1>TNP GECPATAN</h1>
             </div>

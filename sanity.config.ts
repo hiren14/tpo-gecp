@@ -12,9 +12,9 @@ const dataset: any = process.env.NEXT_PUBLIC_SANITY_DATASET
 
 export default defineConfig({
   basePath: "/studio",
-  name: 'Blog_Studio',
-  title: 'Blog Studio',
-
+  name: 'TNP_Gecpatan',
+  title: 'TNP Gecpatan',
+  
   projectId,
   dataset,
 

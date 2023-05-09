@@ -29,22 +29,22 @@ interface Post extends Base {
     description: string;
     placeds:Placed;
 }
-interface Sdata extends Base {
-    name: string;
-    position:string;
-    linkedln:string;
-    // companyname:string;
-    year:string;
-    package:string;
-    simg: IImage;
-    slug: Slug;
-}
-interface Placed extends Base {
-    companyname:string;
-    simg: IImage;
-    sdatas:Sdata;
-    slug: Slug;
-}
+// interface Sdata extends Base {
+//     name: string;
+//     position:string;
+//     linkedln:string;
+//     // companyname:string;
+//     year:string;
+//     package:string;
+//     simg: IImage;
+//     slug: Slug;
+// }
+// interface Placed extends Base {
+//     companyname:string;
+//     simg: IImage;
+//     sdatas:Sdata;
+//     slug: Slug;
+// }
 
 interface Author extends Base {
     bio: Block[];
@@ -88,10 +88,10 @@ interface Category extends Base {
     title: string;
 }
 
-interface mainImage {
-    _type: "image";
-    asset: Reference;
-}
+// interface mainImage {
+//     _type: "image";
+//     asset: Reference;
+// }
 
 interface Title {
     _type: "string";
