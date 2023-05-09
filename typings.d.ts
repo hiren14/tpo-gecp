@@ -10,23 +10,23 @@ interface Post extends Base {
     author: Author;
     dinter:string;
     dlast:string;
-    vac:string;
+    vac:String;
     bond:Block[];
     inter:Block[];
-    quali:string;
-    sel:string;
-    elig:string;
-    package:string;
-    gurl:string;
-    loc:string;
-    companyname: string;
+    quali:String;
+    sel:String;
+    elig:String;
+    package:String;
+    gurl:String;
+    loc:String;
+    companyname: String;
     job: Block[];
     categories: Category[];
     comments: Comment[];
     mainImage: Image;
     slug: Slug;
-    title: string;
-    description: string;
+    title: String;
+    description: String;
     placeds:Placed;
 }
 // interface Sdata extends Base {

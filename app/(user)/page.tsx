@@ -4,7 +4,6 @@ import { client } from "../../lib/sanity.client"
 import PreviewSuspense from "../../components/PreviewSuspense"
 import PreviewBlogList from "../../components/PreviewBlogList"
 import BlogList from "../../components/BlogList"
-import Footer from "../../components/footer/Footer"
 // import { lazy } from "react"
 
 const query = groq`
@@ -53,8 +52,7 @@ const Page = async () => {
     <>
       <BlogList posts={posts} />
       <div className="flex items-center justify-center py-10">
-      <Footer></Footer>
-
+    
       </div>
     </>
   )

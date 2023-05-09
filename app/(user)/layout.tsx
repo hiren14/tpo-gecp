@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner"
 import Header from "../../components/Header"
+import Footer from "../../components/footer/Footer"
 import "../../styles/globals.css"
 
 export default function RootLayout({
@@ -14,6 +15,7 @@ export default function RootLayout({
         <Header/>
         <Banner/>
         {children}
+        <Footer />
       </body>
     </html>
   )

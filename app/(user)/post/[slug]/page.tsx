@@ -3,7 +3,6 @@ import { groq } from "next-sanity";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
 import { client } from "../../../../lib/sanity.client";
 import urlFor from "../../../../lib/urlFor";
-import Footer  from '../../../../components/footer/Footer'
 
 type Props = {
   params: {
@@ -41,22 +40,6 @@ const Post = async ({ params: { slug } }: Props) => {
     ...,
     author->,
     categories[]->,
-    sel,
-    vac,
-    description,
-    title,
-    job,
-    package,
-    companyname,
-    inter,
-    mainImage,
-    loc,
-    elig,
-    bond,
-    quali,
-    dinter,
-    dlast,
-    gurl,
   }
     `
 
@@ -66,7 +49,7 @@ const Post = async ({ params: { slug } }: Props) => {
     <article className="px-10 p-18">
       <section className="space-y-2 mb-10 border border-[#0ACBCB] text-white">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
-          {/* <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
+          <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
             <img
               className="object-cover object-center mx-auto"
               src={urlFor(post.mainImage).url()}
@@ -75,12 +58,12 @@ const Post = async ({ params: { slug } }: Props) => {
               (max-width: 1200px) 100vw,
               100vw"
             />
-          </div> */}
+          </div>
 
           <section className="p-5 bg-[#0ACBCB] w-full ">
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
               <div>
-                <h1 className="text-4xl font-extrabold">{post.companyname}</h1>
+                <h1 className="text-4xl font-extrabold">{post.title}</h1>
                 <p className="text-sm">
                   {
                     new Date(post._createdAt).toLocaleDateString(
@@ -187,7 +170,16 @@ Eligibility {""}  </h4> <p className="text-l text-l  inline-block bg-gray-200 ro
 
 <p className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2  space-x-4">
 DATE OF INTERVIEW{' '}
-      {  new Date(post.dinter).toLocaleString()}
+{
+                    new Date(post.dinter).toLocaleDateString(
+                      "en-US",
+                      {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric"
+                      }
+                    )
+                  }
   </p>
 
 {/* last date of registration */}
@@ -195,7 +187,16 @@ DATE OF INTERVIEW{' '}
 
 <p className="font-extralight text-m  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm  text-gray-700 mr-2 mb-2 space-x-4">
 last date of registration{" "}
-      {  new Date(post.dlast).toLocaleString()}
+{
+                    new Date(post.dlast).toLocaleDateString(
+                      "en-US",
+                      {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric"
+                      }
+                    )
+                  }
   </p>
 {/* last */}
 <br />
@@ -204,7 +205,6 @@ last date of registration{" "}
 
       </div>
       </div>
-      <Footer />
     </article>
   
   )
