@@ -4,7 +4,6 @@ import { client } from "../../lib/sanity.client"
 import PreviewSuspense from "../../components/PreviewSuspense"
 import PreviewBlogList from "../../components/PreviewBlogList"
 import BlogList from "../../components/BlogList"
-// import { lazy } from "react"
 
 const query = groq`
   *[_type=='post']{
