@@ -2,9 +2,9 @@
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    appDir: true
+    appDir: true,
   },
   images: {
-    domains: ['cdn.sanity.io']
+    domains: ["avatars.githubusercontent.com", "cdn.sanity.io"],
   },
-}
+};

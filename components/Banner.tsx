@@ -1,21 +1,32 @@
-import React from 'react'
-
 const Banner = () => {
   return (
-    <div className='px-10 flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold py-5 mb-10'>
-          <div>
-              <h1 className='text-7xl'>Gecp tpo </h1>
-              <h2 className='mt-5'>welcome to{" "}
-                  <span className='underline decoration-4 decoration-[#0ACBCB]'>
-                      Tnp site to 
-                </span>{" "}
-                find placement drive
-              </h2>
-        </div>
-
-         
+    <div
+      className="flex flex-col justify-between font-bold px-10 py-5 mb-10
+          lg:flex-row lg:space-x-5"
+    >
+      <div>
+        <h1 className="text-5xl">Tnp Gecp</h1>
+        <h2
+          className="mt-5
+              md:mt-8"
+        >
+          Welcome to{" "}
+          <span className="underline underline-offset-2 decoration-4 decoration-[#8F00FF]">
+            the Tnp Site
+          </span>
+          {""} To Find The .
+        </h2>
+      </div>
+      <p className=" max-w-xs md:mt-2 py-2 mt-6 font-extrabold">
+        
+        <span className="underline underline-offset-2 decoration-4 decoration-[#8F00FF]">
+          {" "}
+          Placement Drive{" "}
+        </span>{" "}
+        for athlete training, development and nutrition.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

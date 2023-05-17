@@ -1,25 +1,30 @@
-import React from 'react'
-import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid"
-import Link from 'next/link'
+import Link from "next/link";
+import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
 
 const StudioNavbar = (props: any) => {
-    return (
-        <>
-            <div>
-                <div className="text-[#0ACBCB] px-6 py-3 flex items-center justify-between bg-[#1a1a1a]">
-                    <Link href={'/'} className='flex'>
-                        <ArrowUturnLeftIcon className='h-6 w-6 mr-2' />
-                        Go to Website
-                    </Link>
+  return (
+    <div>
+      <>
+        <div className="flex items-center justify-between p-5">
+          <Link className="text-[#8F00FF] flex items-center" href="/">
+            <ArrowUturnLeftIcon className="h-6 w-6 text-[#8F00FF] mr-2" />
+            Go To Website
+          </Link>
 
-                    <div>
-                        <a href="https://github.com/hiren14">visit GitHub</a>
-                    </div>
-                </div>
-                <>{props.renderDefault(props)}</>
-            </div>
-        </>
-    )
-}
+          <div className="hidden md:flex p-5 rounded-lg justify-center border-2 border-[#8F00FF]">
+            <h1 className="font-bold text-white">Made with </h1>
+            <Link
+              className="text-[#8F00FF] font-bold ml-2"
+              href="https://hirenlalani.netlify.app/"
+            >
+             ❤️
+            </Link>
+          </div>
+        </div>
+        {props.renderDefault(props)}
+      </>
+    </div>
+  );
+};
 
-export default StudioNavbar
+export default StudioNavbar;

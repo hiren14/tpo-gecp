@@ -1,15 +1,20 @@
-import React from 'react'
+import Image from "next/image";
 
 const Logo = (props: any) => {
+  const { renderDefault, title } = props;
 
-    const { renderDefault, title } = props
+  return (
+    <div className="flex items-center space-x-2">
+      <Image
+        className="rounded-full object-cover"
+        width={50}
+        height={50}
+        src="/profile-pic.png"
+        alt="logo"
+      />
+      <>{renderDefault(props)}</>
+    </div>
+  );
+};
 
-    return (
-        <div className='flex items-center'>
-            <img src="/profile-pic.png" alt="tpo gecp" className='rounded-full object-cover' width={50} />
-            {renderDefault && <>{renderDefault(props)}</>}
-        </div>
-    )
-}
-
-export default Logo
+export default Logo;

@@ -1,23 +1,35 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import Image from "next/image";
+import DarkModeButton from "./DarkModeButton";
 
 const Header = () => {
-    return (
-        <>
-        <header className='flex items-center justify-between space-x-2 font-bold py-5 px-10'>
-            <div className='flex items-center space-x-2'>
-                <Link href={"/"} >
-                    <img src={"./profile-pic.png"} className="rounded-full" width={50} height={50} alt="TNP"/>
-                </Link>
-                <h1>TNP GECPATAN</h1>
-            </div>
+  return (
+    <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5">
+      <div className="flex items-center space-x-2">
+        <Link href="/">
+          <Image
+            className="rounded-full"
+            src="/profile-pic.png"
+            width={50}
+            height={50}
+            alt="logo"
+          />
+        </Link>
+      </div>
 
-            <div>
-                <Link href={'https://www.linkedin.com/company/gec-patan/'}  target="_blank" className="px-5 py-3 text-xs sm:text-sm md:text-base  bg-gray-700 text-[#0ACBCB] flex items-center rounded-full text-center hover:bg-gradient-to-tr from-teal-400 via-violet-600 to-yellow-200 hover:text-white hover:shadow-2xl">Visit </Link>
-            </div>
-        </header>
-        </>
-    )
-}
+      <div className="flex items-center space-x-6">
+        <Link
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-2 py-3 text-sm md:text-base bg-[#8F00FF] text-[#FFF] hover:bg-[#483248] transition-all duration-[350ms] ease-out flex items-center rounded-lg text-center"
+        >
+          Home
+        </Link>
+        <DarkModeButton />
+      </div>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

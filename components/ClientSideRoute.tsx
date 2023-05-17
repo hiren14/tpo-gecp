@@ -1,19 +1,15 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
 
-const ClientSideRoute = ({
-  children, route
+function ClientSideRoute({
+  children,
+  route,
 }: {
-  children: React.ReactNode,
-  route: string
-}) => {
-  return (
-    <Link href={route}>
-      {children}
-    </Link>
-  )
+  children: React.ReactNode;
+  route: string;
+}) {
+  return <Link href={route}>{children}</Link>;
 }
 
-export default ClientSideRoute
+export default ClientSideRoute;

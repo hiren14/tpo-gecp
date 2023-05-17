@@ -1,45 +1,44 @@
 import { buildLegacyTheme } from "sanity";
 
 const props = {
-    "--white": "#fff",
-    "--black": "#1a1a1a",
-    "--brand": "#0ACBCB",
-    "--yellow": "#FFC026",
-    "--purple": "#B194CC",
-    "--red": "#F74258",
-    "--green": "#D4F2D7",
-}
+	"--my-white": "#fff",
+	"--my-black": "#1a1a1a",
+	"--ad-performance-brand": "#8F00FF",
+	"--my-red": "#db4437",
+	"--my-yellow": "#fee502",
+	"--my-green": "#0f9d58",
+};
 
 export const myTheme = buildLegacyTheme({
-    // Base theme colors
-    "--black": props["--black"],
-    "--white": props["--white"],
+	/* Base theme colors */
+	"--black": props["--my-black"],
+	"--white": props["--my-white"],
 
+	"--gray": "#666",
+	"--gray-base": "#666",
 
-    "--gray": "#666",
+	"--component-bg": props["--my-black"],
+	"--component-text-color": props["--my-white"],
 
-    "--component-bg": props["--brand"],
-    "--component-text-color": props["--white"],
+	/* Brand */
+	"--brand-primary": props["--ad-performance-brand"],
 
-    // Brand
-    "--brand-primary": props["--brand"],
+	// Default button
+	"--default-button-color": "#666",
+	"--default-button-primary-color": props["--ad-performance-brand"],
+	"--default-button-success-color": props["--my-green"],
+	"--default-button-warning-color": props["--my-yellow"],
+	"--default-button-danger-color": props["--my-red"],
 
-    // Default Button
-    "--default-button-color": "#666",
-    "--default-button-primary-color": props["--brand"],
-    "--default-button-success-color": props["--green"],
-    "--default-button-warning-color": props["--yellow"],
-    "--default-button-danger-color": props["--red"],
+	/* State */
+	"--state-info-color": props["--ad-performance-brand"],
+	"--state-success-color": props["--my-green"],
+	"--state-warning-color": props["--my-yellow"],
+	"--state-danger-color": props["--my-red"],
 
-    // state
-    "--state-info-color": props["--brand"],
-    "--state-success-color": props["--green"],
-    "--state-warning-color": props["--yellow"],
-    '--state-danger-color': props["--red"],
+	/* Navbar */
+	"--main-navigation-color": props["--my-black"],
+	"--main-navigation-color--inverted": props["--my-white"],
 
-    // navbar
-    "--main-navigation-color": props["--black"],
-    "--main-navigation-color--inverted": props["--white"],
-
-    "--focus-color": props["--brand"]
-})
+	"--focus-color": props["--ad-performance-brand"],
+});
