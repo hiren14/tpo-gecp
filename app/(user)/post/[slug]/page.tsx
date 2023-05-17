@@ -40,6 +40,18 @@ const Post = async ({ params: { slug } }: Props) => {
     ...,
     author->,
     categories[]->,
+    mainIamage,
+    __createdAt,
+    description,
+    job,
+    package,
+    vac,
+    loc,
+    inter,
+    quali,
+    dinter,
+    dlast,
+
   }
     `
 
@@ -129,18 +141,18 @@ const Post = async ({ params: { slug } }: Props) => {
      
        </div>
        <h4 className="text-l mt-10 mb-3">
- Package: {"  "} </h4>
+ Package:  </h4>
  <p className="text-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
   {post.package}</p>
       
   <h4 className="text-l mt-10 mb-3">
-Vacancy: {" "} </h4> <p className="text-l font-light text-gray-500 mb-2">
+Vacancy:  </h4> <p className="text-l font-light text-gray-500 mb-2">
         {post.vac}
  </p>      
 {/* job location */}
 
 <h4 className="text-l mt-10 mb-3">
-Job Location: {" "}</h4>   <p className="text-l font-light text-gray-500 mb-2">
+Job Location:</h4>   <p className="text-l font-light text-gray-500 mb-2">
       {post.loc}
  </p>       
 {/* internship  */}
@@ -155,21 +167,21 @@ Qualification  */}
 
 <h4 className="text-l  font-blod text-gray-500 mb-2">
 
-Qualification {' '} </h4>  <p className="text-ltext-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+Qualification  </h4>  <p className="text-ltext-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
       {post.quali}
  </p>       
  <br />
 {/* 
 Eligibility */}
 <h4 className="text-l  font-light text-gray-500 mb-2">
-Eligibility {""}  </h4> <p className="text-l text-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+Eligibility   </h4> <p className="text-l text-l  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
   {post.elig}
         </p>
           {/* DATE OF INTERVIEW */}
           <br />
 
 <p className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2  space-x-4">
-DATE OF INTERVIEW{' '}
+DATE OF INTERVIEW
 {
                     new Date(post.dinter).toLocaleDateString(
                       "en-US",
@@ -186,7 +198,7 @@ DATE OF INTERVIEW{' '}
 <br />
 
 <p className="font-extralight text-m  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm  text-gray-700 mr-2 mb-2 space-x-4">
-last date of registration{" "}
+last date of registration
 {
                     new Date(post.dlast).toLocaleDateString(
                       "en-US",
